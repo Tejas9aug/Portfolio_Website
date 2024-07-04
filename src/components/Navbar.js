@@ -22,6 +22,22 @@ export default function Navbar() {
         <div className='name'>
             <a href="#">Tejas Patange</a>
         </div>
+        <div onClick = {hamburger}>
+          <div>
+
+          </div>
+          <div>
+            <ul>
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Qualifications">Qualifications</a></li>
+              <li><a href="#Project">Projects</a></li>
+              <li><a href="#Contact Me">Contact Me</a></li>
+                
+              
+            </ul>
+          </div>
+        </div>
 
     </nav>
   )
