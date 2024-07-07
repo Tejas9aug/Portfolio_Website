@@ -260,3 +260,291 @@ h3 span{
 .homeHandles img:hover {
   transform: scale(1.2);
 }
+.contSecW{
+  display: block;
+  background-color:rgb(251, 253, 254);
+} 
+
+.contSecB{
+  display: block;
+  background-color:#141220;
+  color: white;
+} 
+
+.contTitle{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 200;
+  text-align: center;
+}
+
+.contContainer{
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  column-gap: 6rem;
+  padding-bottom: 2rem;
+}
+
+.contContent{
+  flex: 0.5;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+}
+
+.contInfoW{
+  width: 20rem;
+}
+
+.contInfoB{
+  width: 20rem;
+  color: #141220;
+}
+
+.contCard{
+  background-color:aliceblue;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 1.4rem;
+  border-radius: 0.75rem;
+}
+
+.contCard{
+  background-color:aliceblue;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 1.4rem;
+  border-radius: 0.75rem;
+}
+
+.contCardTitle{
+  margin: 0;
+}
+
+.contCardTitle i{
+  margin-left: 0.3rem;
+}
+
+.contBtn i{
+  margin-top: .2rem;
+  font-size: 1.5rem;
+  transition: transform .3s;
+}
+
+.contCardData:hover{
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.contNameDir:hover i{
+  transform: translateX(.25rem);
+}
+
+
+.contact__button-icon{
+  color: rgb(57, 131, 222);
+}
+
+.contNameDir{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: fit-content;
+}
+
+.contNameDir a{
+  text-decoration: none;
+  color: #141220;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.contForm{
+  width: 250px;
+}
+
+.contFormDiv{
+  position: relative;
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contFormInW{
+  position: absolute;
+  margin-top: 1rem;
+  top:0;
+  left: 0;
+  width: 20rem;
+  height: 120%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background: none;
+  outline: none;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+.contFormInB{
+  position: absolute;
+  margin-top: 1rem;
+  top:0;
+  left: 0;
+  width: 20rem;
+  height: 120%;
+  border: 2px solid white;
+  background: none;
+  outline: none;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  z-index: 1;
+  color: white;
+}
+
+.contFormTagW{
+  position: absolute;
+  margin-top: 1rem;
+  top: -.75rem;
+  left: 1.2rem;
+  font-size: medium;
+  padding: 0.25rem;
+  background-color: rgb(251, 253, 254);
+  z-index: 10;
+}
+
+.contFormTagB{
+  position: absolute;
+  margin-top: 1rem;
+  top: -.75rem;
+  left: 1.2rem;
+  font-size: medium;
+  padding: 0.25rem;
+  background-color: #141220;
+  color: white;
+  z-index: 10;
+}
+
+.contFormArea{
+  height: 10rem;
+}
+
+.contFormArea textarea{
+  resize: none;
+}
+
+::placeholder{
+  font-family: 'Roboto Slab', serif;
+}
+
+.formSubmit{
+  color: rgb(57, 131, 222);
+  background-color:aliceblue;
+  margin-top: 2rem;
+  height: 2rem;
+  width: 40%;
+  border-radius: .75rem;
+  font-size:medium;
+  font-weight: 500;
+  border: 1.5px solid black;
+}
+
+.formSubmit i{
+  margin-left: .1rem;
+}
+
+.formSubmit:hover{
+  cursor: pointer;
+  background-color: rgb(62, 152, 243);
+  color: white;
+}
+
+/* Footer */
+
+.footerSecW{
+  display: block;
+  /* background-color:rgb(251, 253, 254); */
+  background-color:rgb(57, 131, 222);
+} 
+
+.footerSecB{
+  display: block;
+  background-color:#0b0a13;
+  color: white;
+} 
+
+.secFooter{
+  height: 14rem;
+  border-top: 1px solid black;
+  padding: 0;
+  color: white;
+}
+
+.footerContainer{
+  padding: 1rem 3rem;
+}
+
+.footerTitle{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.footerList{
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.footerList a{
+  text-decoration: none;
+  color: white;
+}
+
+.footerList a:hover{
+  color: aqua;
+}
+
+
+.footerSocial{
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+}
+
+.footerSocial i{
+  color: black;
+}
+
+.footerIcon{
+  background-color: aliceblue;
+  font-size: 1.125rem;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+}
+
+.footerIcon:hover{
+  background:aqua;
+}
+
+.footerCopyright{
+  display: block;
+  margin-top: 3.4rem;
+  text-align: center;
+}
+
+@keyframes blink {
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+}
