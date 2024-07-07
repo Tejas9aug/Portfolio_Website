@@ -1,13 +1,262 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Ubuntu:ital,wght@1,500&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section{
+  padding-top: 3rem;
+  height: 35rem;
+}
+
+/* Navbar */
+
+.navbarB {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141220;
+  font-family: 'Roboto Slab', serif;
+  /* box-shadow: 0 0.125rem 0.25rem rgba(255, 255, 255, 0.956) */
+}
+
+.name {
+  font-size: 1.5rem;
+  margin: .5rem;
+  font-family: 'Roboto Slab', serif;
+  color: black;
+}
+
+.navbarB .name a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+.navbarW {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  font-family: 'Roboto Slab', serif;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 11%)
+}
+
+.navbarW .name a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+}
+
+.name a:hover {
+  color: rgb(57, 131, 222);
+}
+
+.navbarMenu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbarMenu li {
+  list-style: none;
+  margin: auto;
+  cursor: pointer;
+}
+
+.menuB li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.menuB li a:hover {
+  color: rgb(221, 175, 115);
+}
+
+.menuW li a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  display: block;
+}
+
+.menuW li a:visited {
+  color:black;
+}
+
+.menuW li a:hover {
+  color: rgb(57, 131, 222);
+}
+
+.navbarMenu li img {
+  display: block;
+  margin: 1rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  cursor: pointer;
+}
+
+.navbarMenu li img:hover {
+  transform: scale(1.1);
+}
+
+.toggleBtn {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.5rem;
+  height: 1.3rem;
+  cursor: pointer;
+}
+
+.toggleBtn .barB, .toggleBtn::after, .toggleBtn::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color:orange;
+  margin: 3px 0px;
+  transition: 0.4s;
+}
+
+.toggleBtn .barW, .toggleBtn::after, .toggleBtn::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color:orange;
+  margin: 3px 0px;
+  transition: 0.4s;
+}
+
+.toggleBtn.cross::before{
+  transform: rotate(-45deg) translate(-8px,4px);
+}
+
+.toggleBtn.cross::after{
+  transform: rotate(45deg) translate(-9px,-5px);
+}
+
+.toggleBtn.cross .barB, .toggleBtn.cross .barW{
+  opacity: 0;
+}
+
+ /* Home */
+
+.homeSecW{
+  /* height: 150%; */
+  display: flex;
+  background-color:rgb(251, 253, 254);
+} 
+
+.homeSecB{
+  /* height: 500px; */
+  display: flex;
+  background-color:#141220;
+} 
+
+.homePic{
+  flex: 50%;
+  /* background-color: aqua; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.homePic .pic{
+  padding: 1rem;  
+  height: 65%;
+}
+
+.homeData{
+  flex: 50%;
+  /* background-color:chartreuse; */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.homeContentW{
+  padding: 1rem;
+  height: 65%;
+  line-height: 1.9rem;
+  /* font-family: 'Roboto Slab', serif; */
+}
+
+.homeContentB{
+  padding: 1rem;
+  height: 65%;
+  line-height: 1.9rem;
+  color: white;
+  /* font-family: 'Roboto Slab', serif; */
+}
+
+h1{
+  font-size: 32px;
+  margin: 10px;  
+  padding-top: 25px;
+}
+
+h2{
+  font-size: 40px;
+  margin: 10px;  
+}
+
+h3{
+  font-size: 28px;
+  margin: 10px;  
+}
+
+h3 span{
+  color: rgb(57, 131, 222);  
+}
+
+.ityped-cursor {
+  animation: blink 1s infinite;
+}
+
+.homeContentW p, .homeContentB p{
+  padding-top: 25px;
+  width: 60%;
+  margin: 10px;
+  line-height: 1.2rem;
+  font-weight: lighter;
+}
+
+.homeHandles{
+  height: 30%;
+  /* margin: 10px; */
+  padding: 6px;
+  padding-top: 25px;
+}
+.homeHandles img{
+  height: 35%;
+  margin: 0.2rem;
+}
+
+.homeHandles img:hover {
+  transform: scale(1.2);
 }

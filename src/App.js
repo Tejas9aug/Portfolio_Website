@@ -3,17 +3,27 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Qualifications from './Qualifications';
+import Qualifications from './components/Qualifications';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
+import { useState } from 'react';
 
-function App() {
+export default function App() {
+
+  const [mode,setmode] = useState(true);
+
+  function change () { 
+          setmode(prevMode=>!prevMode)
+  }
   return (
     <>
-      <Navbar/>
-      <Home/>
-      <About/>
+      <Navbar
+         bg={mode}
+         changeBg = {change}
+      />
+      <Home bg={mode}/>
+      <About bg={mode}/>
       <Qualifications/>
       <Projects/>
       <ContactMe/>
@@ -22,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+

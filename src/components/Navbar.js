@@ -1,44 +1,45 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
-export default function Navbar() {
-    const [open, setOpen] = useState(false)
+export default function Navbar(props) {
+
+  const [open, setOpen] = useState(false)
 
   function hamburger() {
     setOpen(!open)
   }
 
+  //choose the screen size 
   const handleResize = () => {
     if (window.innerWidth > 810) {
       setOpen(false)
     }
   }
 
-  
+  // create an event listener
   useEffect(() => {
     window.addEventListener("resize", handleResize)
   })
-    return (
-    <nav>
-        <div className='name'>
-            <a href="#">Tejas Patange</a>
-        </div>
-        <div onClick = {hamburger}>
-          <div>
 
-          </div>
-          <div>
-            <ul>
-              <li><a href="#Home">Home</a></li>
-              <li><a href="#About">About</a></li>
-              <li><a href="#Qualifications">Qualifications</a></li>
-              <li><a href="#Project">Projects</a></li>
-              <li><a href="#Contact Me">Contact Me</a></li>
-                
-              
-            </ul>
-          </div>
-        </div>
 
+  return (
+    <nav className={props.bg ? "navbarW" : "navbarB"}>
+      <div className='name'>
+        <a href='#'>Tejas Patange</a>
+      </div>
+      <div className={open ? "toggleBtn cross" : "toggleBtn"} onClick={hamburger}>
+        <div className={props.bg ? "barW" : "barB"} />
+      </div>
+      <div className={open ? "navbarMenuActive" : "navbarMenu"}>
+        <ul className={props.bg ? "menuW" : "menuB"}>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Qualifications">Qualifications</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          
+          <li><a href="#ContactMe">Contact Me</a></li>
+          <li><img src={props.bg ? "assets/moon.png" : "assets/sun.png"} onClick={props.changeBg}></img></li>
+        </ul>
+      </div>
     </nav>
   )
 }
